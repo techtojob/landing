@@ -9,15 +9,17 @@ import { MoreMenu } from "@/components/more-menu";
 import { bolsa, site } from "@/lib/site";
 
 // El menú de TechToJob: el MISMO en la landing y en la bolsa (techtojob.com/empleo, repo techtojob/platform:
-// apps/web/src/components/sitio/nav-bolsa.tsx), para que se vea como una sola web.
-// Ofertas, Talento y Proyectos son páginas de la bolsa; Torneos y lo de "Más", de la landing.
+// apps/web/src/components/sitio/nav-bolsa.tsx), en dos grupos para que se vea a dónde lleva cada cosa:
+// - Empleo: Ofertas, Talento y Proyectos (la bolsa).
+// - Comunidad ▾: ¿Qué es TechToJob? (esta portada), Torneos, Noticias, Para empresas y Quiénes somos (la landing).
 const navigation = [
   ["offers", bolsa.ofertas],
   ["talentSearch", bolsa.talento],
   ["projects", bolsa.proyectos],
-  ["tournaments", "/torneos"],
 ] as const;
-const more = [
+const community = [
+  ["whatIs", "/"],
+  ["tournaments", "/torneos"],
   ["news", "/noticias"],
   ["forCompanies", "/empresas"],
   ["about", "/quienes-somos"],
@@ -26,30 +28,49 @@ const more = [
 type Translate = Awaited<ReturnType<typeof getTranslations>>;
 
 function Navigation({ t, current, mobile = false }: Readonly<{ t: Translate; current?: string; mobile?: boolean }>) {
-  const items = mobile ? [...navigation, ...more] : navigation;
+  if (mobile) {
+    const heading = "px-4 pb-1 pt-3 text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-white/60";
+    const link = (key: string, href: string) => (
+      <li key={key}>
+        <a href={href} aria-current={current === href ? "page" : undefined} className={`block rounded-xl px-4 py-3 text-base font-bold transition-colors hover:bg-white/8 hover:text-primary ${current === href ? "bg-white/8 text-primary" : ""}`}>
+          {t(`navigation.${key}`)}
+        </a>
+      </li>
+    );
+    return (
+      <div className="grid min-w-56 gap-1">
+        <p className={heading}>{t("navigation.groupJobs")}</p>
+        <ul className="grid gap-1">{navigation.map(([key, href]) => link(key, href))}</ul>
+        <p className={`${heading} mt-1 border-t border-white/10`}>{t("navigation.groupCommunity")}</p>
+        <ul className="grid gap-1">{community.map(([key, href]) => link(key, href))}</ul>
+      </div>
+    );
+  }
   return (
-    <ul className={mobile ? "grid min-w-56 gap-1" : "flex items-center gap-6"}>
-      {items.map(([key, href]) => {
+    <ul className="flex items-center gap-6">
+      {navigation.map(([key, href]) => {
         const active = current === href;
         return (
           <li key={key}>
             <a
               href={href}
               aria-current={active ? "page" : undefined}
-              className={mobile
-                ? `block rounded-xl px-4 py-3 text-base font-bold transition-colors hover:bg-white/8 hover:text-primary ${active ? "bg-white/8 text-primary" : ""}`
-                : `text-sm font-bold transition-colors hover:text-primary ${active ? "text-primary" : ""}`}
+              className={`text-sm font-bold transition-colors hover:text-primary ${active ? "text-primary" : ""}`}
             >
               {t(`navigation.${key}`)}
             </a>
           </li>
         );
       })}
-      {!mobile && (
-        <li>
-          <MoreMenu label={t("navigation.menuMore")} current={current} items={more.map(([key, href]) => ({ href, label: t(`navigation.${key}`) }))} />
-        </li>
-      )}
+      <li aria-hidden="true" className="h-6 w-px bg-white/20" />
+      <li>
+        <MoreMenu
+          label={t("navigation.groupCommunity")}
+          heading="techtojob.com"
+          current={current}
+          items={community.map(([key, href]) => ({ href, label: t(`navigation.${key}`), help: t(`navigation.help.${key}`) }))}
+        />
+      </li>
     </ul>
   );
 }
@@ -69,6 +90,8 @@ function DiscordAction({ t, className }: Readonly<{ t: Translate; className: str
 
 export async function SiteHeader({ home = true, current }: Readonly<{ home?: boolean; current?: string }>) {
   const t = await getTranslations();
+  // En la portada, "¿Qué es TechToJob?" es la página actual.
+  current = home ? "/" : current;
 
   return (
     <header className="sticky inset-x-0 top-0 z-50 px-[var(--page-gutter)]">

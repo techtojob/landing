@@ -36,10 +36,19 @@
     "offers": "Ofertas",
     "talentSearch": "Talento",
     "projects": "Proyectos",
-    "menuMore": "Más",
     "forCompanies": "Para empresas",
     "login": "Entrar",
-    "account": "Mi cuenta"
+    "account": "Mi cuenta",
+    "groupJobs": "Empleo",
+    "groupCommunity": "Comunidad",
+    "whatIs": "¿Qué es TechToJob?",
+    "help": {
+      "whatIs": "La comunidad en Discord y cómo funciona",
+      "tournaments": "Retos para ganar experiencia real",
+      "news": "Lo último de la comunidad",
+      "forCompanies": "Publica ofertas y encuentra talento",
+      "about": "Quién está detrás"
+    }
   },
   "hero": {
     "title": "No eres solo\nun número",
