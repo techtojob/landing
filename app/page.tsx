@@ -38,6 +38,7 @@ export default async function HomePage() {
             offers: t("liveBoard.offers"),
             allOffers: t("liveBoard.allOffers"),
             projects: t("liveBoard.projects"),
+            newProjects: t("liveBoard.newProjects"),
             allProjects: t("liveBoard.allProjects"),
             likes: t.raw("liveBoard.likes") as string,
             modalidades: t.raw("liveBoard.modalidades") as Record<string, string>,
