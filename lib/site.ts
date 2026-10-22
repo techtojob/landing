@@ -37,3 +37,17 @@ const deploymentUrl =
   (process.env.NODE_ENV === "production" ? productionUrl : "http://localhost:3000");
 
 export const siteUrl = deploymentUrl.replace(/\/+$/, "");
+
+// La bolsa de empleo (techtojob.com/empleo, repo techtojob/platform): el menú lleva a sus páginas.
+export const bolsa = {
+  ofertas: "/empleo",
+  talento: "/empleo/talento",
+  proyectos: "/empleo/proyectos",
+  entrar: "/empleo/entrar",
+  cuenta: "/empleo/cuenta/ajustes",
+  oferta: (slug: string, id: string) => `/empleo/ofertas/${slug}-${id}`,
+  proyecto: (slug: string, id: string) => `/empleo/proyectos/${slug}-${id}`,
+} as const;
+
+// El API de la bolsa: la portada pide ahí las últimas ofertas y los proyectos del mes (desde el navegador).
+export const apiUrl = (process.env.NEXT_PUBLIC_API_URL ?? "https://api.techtojob.com").replace(/\/+$/, "");

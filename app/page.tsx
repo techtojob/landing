@@ -12,6 +12,7 @@ import { CardSwing } from "@/components/card-swing";
 import { FaqSection, type FaqItem } from "@/components/faq";
 import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
+import { LiveBoard } from "@/components/live-board";
 import { ScrollExperience } from "@/components/scroll-experience";
 import { SiteHeader } from "@/components/site-header";
 import { TournamentsSection } from "@/components/tournaments";
@@ -30,6 +31,18 @@ export default async function HomePage() {
       <SiteHeader />
       <main id="content">
         <Hero />
+        <LiveBoard
+          text={{
+            title: t("liveBoard.title"),
+            lead: t("liveBoard.lead"),
+            offers: t("liveBoard.offers"),
+            allOffers: t("liveBoard.allOffers"),
+            projects: t("liveBoard.projects"),
+            allProjects: t("liveBoard.allProjects"),
+            likes: t.raw("liveBoard.likes") as string,
+            modalidades: t.raw("liveBoard.modalidades") as Record<string, string>,
+          }}
+        />
         <HowItWorks />
         <TalentSection more />
         <CompaniesSection more />
