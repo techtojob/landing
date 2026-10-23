@@ -40,7 +40,7 @@ export default async function AboutPage() {
   const winners = t.raw("pages.about.winners") as { title: string; text: string; label: string; link: string; items: Winner[] };
 
   return (
-    <PageShell path={path}>
+    <PageShell>
       <PageHero title={t("pages.about.title")} lead={t("pages.about.lead")} crumbs={[{ label: t("navigation.about"), href: path }]} />
 
       {/* Cifras: notas pinchadas, como los pasos de "Cómo funciona" */}

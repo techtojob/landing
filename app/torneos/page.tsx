@@ -16,7 +16,7 @@ export default async function TournamentsPage() {
   const t = await getTranslations();
 
   return (
-    <PageShell path={path}>
+    <PageShell>
       <PageHero title={t("pages.tournaments.title")} lead={t("pages.tournaments.lead")} crumbs={[{ label: t("navigation.tournaments"), href: path }]} />
       <TournamentsSection />
       <ContentBlocks blocks={t.raw("pages.tournaments.blocks") as ContentBlock[]} />

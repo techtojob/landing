@@ -39,7 +39,7 @@ export default async function NewsArticlePage({ params }: Props) {
   const others = news.es.items.filter((other) => other.slug !== item.slug);
 
   return (
-    <PageShell path="/noticias">
+    <PageShell>
       <article>
         <PageHero
           title={item.title}

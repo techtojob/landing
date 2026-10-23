@@ -16,7 +16,7 @@ export default async function TalentPage() {
   const t = await getTranslations();
 
   return (
-    <PageShell path={path}>
+    <PageShell>
       <PageHero title={t("pages.talent.title")} lead={t("pages.talent.lead")} crumbs={[{ label: t("navigation.talent"), href: path }]} />
       <HowItWorks />
       <TalentSection />
