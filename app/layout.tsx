@@ -51,9 +51,11 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+// "@id": el mismo en la bolsa (techtojob.com/empleo): para Google y los asistentes de IA es una sola organización.
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
   name: site.name,
   url: siteUrl,
   logo: `${siteUrl}/images/brand-mark-512.png`,
@@ -68,9 +70,11 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
   name: site.name,
   url: siteUrl,
   inLanguage: "es",
+  publisher: { "@id": `${siteUrl}/#organization` },
 };
 
 export default async function RootLayout({
