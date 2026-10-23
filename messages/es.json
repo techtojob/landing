@@ -32,7 +32,13 @@
     "news": "Noticias",
     "breadcrumb": "Ruta de navegación",
     "about": "Quiénes somos",
-    "more": "Saber más"
+    "more": "Saber más",
+    "offers": "Ofertas",
+    "talentSearch": "Talento",
+    "projects": "Proyectos",
+    "login": "Entrar",
+    "account": "Mi cuenta",
+    "jobs": "Bolsa de empleo"
   },
   "hero": {
     "title": "No eres solo\nun número",
@@ -665,5 +671,20 @@
     "title": "Esta página no existe",
     "lead": "Puede que el enlace esté mal escrito o que la página se haya movido. Prueba desde aquí:",
     "home": "Ir a la portada"
+  },
+  "liveBoard": {
+    "title": "Ahora en la bolsa",
+    "lead": "Ofertas tech revisadas por el staff y lo que está construyendo la comunidad. Todo en directo.",
+    "offers": "Últimas ofertas",
+    "allOffers": "Ver todas las ofertas",
+    "projects": "Proyectos de este mes",
+    "newProjects": "Proyectos nuevos",
+    "allProjects": "Ver todos los proyectos",
+    "likes": "{count} me gusta",
+    "modalidades": {
+      "remoto": "Remoto",
+      "hibrido": "Híbrido",
+      "presencial": "Presencial"
+    }
   }
 }
