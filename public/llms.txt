@@ -1,6 +1,6 @@
 # TechToJob
 
-> Comunidad tech en español, organizada en Discord, donde desarrolladores y empresas se conocen participando en torneos, proyectos y conversaciones. Nació en agosto de 2026 y reúne a más de 2.000 personas entre Discord, LinkedIn y redes (dato de octubre de 2026). Entrar y publicar un perfil es gratis. TechToJob no garantiza un empleo.
+> Comunidad tech en español, organizada en Discord, donde desarrolladores y empresas se conocen participando en torneos, proyectos y conversaciones. Tiene una bolsa de empleo propia en techtojob.com/empleo con ofertas tech revisadas por el staff, perfiles de talento y proyectos de la comunidad. Nació en agosto de 2026 y reúne a más de 2.000 personas entre Discord, LinkedIn y redes (dato de octubre de 2026). Entrar, publicar un perfil y subir proyectos es gratis. TechToJob no garantiza un empleo.
 
 ## Páginas principales
 
@@ -11,10 +11,21 @@
 - [Torneos](https://techtojob.com/torneos): retos abiertos con brief público, ranking de la comunidad y final con jurado.
 - [Noticias](https://techtojob.com/noticias): torneos celebrados, ganadores y novedades.
 
+## Bolsa de empleo
+
+- [Ofertas](https://techtojob.com/empleo): ofertas de trabajo tech (desarrollo, datos e IA, ciberseguridad, producto y diseño, infraestructura y DevOps, soporte IT). El staff revisa cada oferta antes de publicarla y cada una lleva a la página de la empresa para aplicar. Se filtran por los idiomas que hablas y por el país desde el que puedes trabajar.
+- [Talento](https://techtojob.com/empleo/talento): perfiles de la comunidad con su stack, nivel, disponibilidad y proyectos. Los miembros verificados tienen su Discord vinculado.
+- [Proyectos y portfolios](https://techtojob.com/empleo/proyectos): proyectos y webs personales de la comunidad, con me gusta y ranking mensual. Cada persona sube un proyecto al mes y un portfolio.
+- [Perfil oficial de TechToJob](https://techtojob.com/empleo/talento/techtojob): qué es la comunidad y todas sus redes oficiales.
+- Versión en inglés: https://techtojob.com/jobs
+- Mapa del sitio de la bolsa: https://techtojob.com/empleo/sitemap.xml
+
 ## Datos
 
-- Idioma: español. Miembros de España y Latinoamérica.
+- Idioma: español (la bolsa también en inglés). Miembros de España y Latinoamérica.
 - Áreas: desarrollo, datos e IA, ciberseguridad, producto y diseño, infraestructura y DevOps, soporte IT.
 - Torneos celebrados: identidad visual (ganador: Pablo Exposito) y landing page (ganador: Esteban Casadei).
+- Para entrar en la bolsa: cuenta de Google o GitHub. Discord se vincula después para verificarse.
 - Discord: https://discord.gg/pzCa8esFGA
+- LinkedIn: https://www.linkedin.com/company/techtojob/
 - Contacto: contacto@techtojob.com
